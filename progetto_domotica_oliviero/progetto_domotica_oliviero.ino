@@ -15,17 +15,7 @@ EthernetServer server(80);
 void setup()
 {
 EthernetClient client;
-  if (client.connect("dynupdate.no-ip.com", 80)) {
-    Serial.println("connessione in corso...");
-    client.println("GET /nic/update?hostname=olivierognn.ddns.net HTTP/1.0");
-    client.println("Host: dynupdate.no-ip.com");
-    client.println("Authorization: Basic b2xpdmllcm9nbm46Q2FsYWlvMDk="); 
-    client.println("User-Agent: Arduino Sketch/1.0 user@host.com");
-    client.println();
-  } 
-  else {
-    Serial.println("connessione fallita");
-  }
+  
   
   Serial.begin(9600);
   
