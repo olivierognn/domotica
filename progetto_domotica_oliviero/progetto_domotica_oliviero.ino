@@ -2,12 +2,22 @@
 #include <Ethernet.h>
 
 
-byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
-byte ip[] =  { 192,168,1,20 };
+
+
+
+
+byte mac[] = { 0x00, 0xAA, 0xBB, 0xCC, 0xDA, 0x02 };
+IPAddress ip(192,168,1,20); //<<< ENTER YOUR IP ADDRESS HERE!!!
+
+
 
 const int MAX_PAGENAME_LEN = 8; // max characters in page name 
 char buffer[MAX_PAGENAME_LEN+1]; // additional character for terminating null
 
+
+// Initialize the Ethernet server library
+// with the IP address and port you want to use 
+// (port 80 is default for HTTP):
 EthernetServer server(80);
 
 
